@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tag canvas</title>
+    <style>
+    body {
+        background-color: black;
+    }
+    </style>
+</head>
+<body>
+
+    <canvas id="quadro"></canvas>
+    
+    <script>
+        
+        const quadro = document.querySelector('#quadro');
+        const contexto = quadro.getContext('2d');
+
+        contexto.fillStyle = '#FF0000';
+        contexto.fillRect(0, 0, 100, 100);
+
+    </script>
+
+</body>
+</html>

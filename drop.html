@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Event: drop</title>
+    <style>
+        #drag {
+            width: 30vw;
+            height: 30vw;
+            background-color: brown;
+        }
+        #target {
+            width: 30vw;
+            height: 30vw;
+            background-color: coral;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="drag" ondrag="debug(event)" ondragend="debug(event)" ondragstart="debug(event)" draggable="true"></div>
+
+    <div id="target" ondragenter="debug(event)" ondragleave="debug(event)" ondragover="cancel(event)" ondrop="debug(event)"></div>
+
+    <script>
+    function cancel(e) {
+        e.preventDefault();
+    }
+    function debug(e) {
+        console.log('Evento: ' + e.type);
+    }
+    </script>
+</body>
+</html>

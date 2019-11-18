@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Event: dblclick</title>
+</head>
+<body onclick="debug(event)">
+
+    <button type="button" ondblclick="debug(event)"></button>
+
+    <script>
+    function debug(e) {
+        e.stopPropagation();
+        console.log('Evento: ' + e.type);
+    }
+    </script>
+</body>
+</html>

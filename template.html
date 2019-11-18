@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tag template</title>
+</head>
+<body>
+    
+    <template id="tpl-1">
+        <li>{{name}}</li>
+    </template>
+
+    <ul>
+        
+    </ul>
+
+    <button type="button">Add</button>
+
+    <script>
+        const btn = document.querySelector('button');
+        const template = document.querySelector('#tpl-1');
+        const ul = document.querySelector('ul');
+
+        btn.addEventListener('click', e => {
+
+            ul.append(template.content.cloneNode(true));
+
+        });
+    </script>
+
+</body>
+</html>
